@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS GRID</title>
+  <style>
+    .box1{
+      background-color: yellow;
+    }
+    .box2{
+      background-color: blue;
+    }
+    .box3{
+      background-color: red;
+    }
+    .box4{
+      background-color: black;
+      color: white;
+    }
+    .s1{
+      display: grid;/*inline, block, inline-block*/
+      /*flexbox: ordena los elementos en una sola dimensión [fila o columna]
+      grid: ordena los elementos de forma bidimensional [filas y columnas al mismo tiempo]
+      ejemplo de matrices (1x1, 1x2; 2x1, 2x2; 3x1, 3x2)
+      1x1 y 1x2
+      [1], [1, 1]
+     
+      2x1 y 2x2
+      [1] [1, 2]
+      [2] [2, 2]
+
+
+      3x3
+      +---------------+
+      | 1:1  1:2  1:3 |
+      | 2:1  2:2  2:3 |
+      | 3:1  3:2  3:3 |
+      +---------------+
+      */
+
+      grid-template-columns: 100px 500px;
+      grid-template-rows: 100px 150px;
+      column-gap: 5px;
+
+    }
+    .s2{
+      width: 100%;
+      height: 400px;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-template-rows: 10% 90%;
+      column-gap: 5px;
+    }
+    .s3{
+      width: 100%;
+      height: 400px;
+      display: grid;
+      /*grid utiliza una unidad de medida llamada "fr" que significa
+      fracción restante*/
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <section class="s1">
+   <article class="box1">Box 1</article>
+   <article class="box2">Box 2</article>
+   <article class="box3">Box 3</article>
+   <article class="box4">Box 4</article>
+  </section>
+  <hr>
+  <section class="s2">
+   <article class="box1">Box 1</article>
+   <article class="box2">Box 2</article>
+   <article class="box3">Box 3</article>
+   <article class="box4">Box 4</article>
+  </section>
+  <hr>
+  <section class="s3">
+   <article class="box1">Box 1</article>
+   <article class="box2">Box 2</article>
+   <article class="box3">Box 3</article>
+   <article class="box4">Box 4</article>
+  </section>
+</body>
+</html>

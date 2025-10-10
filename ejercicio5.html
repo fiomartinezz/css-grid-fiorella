@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otro sidebar</title>
+  <style>
+  .tabla{
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    width: 500px;
+  } 
+  .tabla div{
+    background: grey;
+    color: white;
+    padding: 18px;
+    text-align: center;
+  }
+  .head{
+    grid-column: 1 / span 3;
+    grid-row: 1
+  }
+  .costado{
+    grid-column: 4;
+    grid-row: 1/ span 2;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="tabla">
+    <div class="head">celda 1</div>
+    <div class="costado">celda 2</div>
+    <div>celda 3</div>
+    <div>celda 4</div>
+    <div>celda 5</div>
+  </div>
+</body>
+</html>

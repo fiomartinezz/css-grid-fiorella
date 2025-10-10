@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celdas combinadas</title>
+  <style>
+  .tabla{
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 100px repeat(2,150px);
+    margin: 0 auto;
+    width: fit-content;
+  } 
+  .tabla div{
+    background: grey;
+    color: white;
+    padding: 18px;
+    text-align: center;
+  }
+  .head{
+    grid-column: 1/4;
+  }
+  .left{
+    grid-row: 2/ span 3
+  }
+  </style>
+</head>
+<body>
+  <div class="tabla">
+    <div class="head">celda 1</div>
+    <div class="left">celda 2</div>
+    <div>celda 3</div>
+    <div>celda 4</div>
+    <div>celda 5</div>
+    <div>celda 6</div>
+  </div>
+</body>
+</html>
